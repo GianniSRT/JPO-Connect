@@ -67,6 +67,7 @@ function App() {
       </main>
       {showSignup && <SignupForm onClose={() => setShowSignup(false)} />}
       {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
+      <Footer />
     </>
   )
 }
