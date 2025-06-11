@@ -71,3 +71,22 @@
   background: #0052cc;
   color: #fff;
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: bold;
+  color: #0052cc;
+}
+
+.user-icon {
+  font-size: 1.5em;
+}
+
+.user-email {
+  font-size: 1em;
+  background: #e6f0ff;
+  padding: 0.3em 0.8em;
+  border-radius: 8px;
+}

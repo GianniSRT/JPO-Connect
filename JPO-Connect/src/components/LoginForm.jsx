@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './SignupForm.css' // Réutilise le style de la modale
 
-function LoginForm({ onClose }) {
+function LoginForm({ onClose, onLogin }) {
   const [form, setForm] = useState({ email: '', mot_de_passe: '' })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -22,9 +22,8 @@ function LoginForm({ onClose }) {
       })
       const data = await res.json()
       if (data.success) {
-        alert('Connexion réussie !')
+        onLogin({ email: form.email, nom: data.nom, id: data.id_utilisateur })
         onClose()
-        // Ici tu peux stocker l'utilisateur connecté dans le state ou localStorage
       } else {
         setError('Email ou mot de passe incorrect.')
       }
@@ -41,10 +40,26 @@ function LoginForm({ onClose }) {
         <button className="close-btn" onClick={onClose}>×</button>
         <h2>Connexion</h2>
         <form onSubmit={handleSubmit}>
-          <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-          <input name="mot_de_passe" type="password" placeholder="Mot de passe" value={form.mot_de_passe} onChange={handleChange} required />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="mot_de_passe"
+            type="password"
+            placeholder="Mot de passe"
+            value={form.mot_de_passe}
+            onChange={handleChange}
+            required
+          />
           {error && <div style={{ color: 'red', marginBottom: '1em' }}>{error}</div>}
-          <button type="submit" disabled={loading}>{loading ? "Connexion..." : "Se connecter"}</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Connexion..." : "Se connecter"}
+          </button>
         </form>
       </div>
     </div>
