@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 11 juin 2025 à 08:10
+-- Généré le : mer. 11 juin 2025 à 13:13
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -56,7 +56,14 @@ CREATE TABLE IF NOT EXISTS `inscription` (
   PRIMARY KEY (`id_inscription`),
   KEY `id_jpo` (`id_jpo`),
   KEY `id_utilisateur` (`id_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `inscription`
+--
+
+INSERT INTO `inscription` (`id_inscription`, `date_inscription`, `est_present`, `id_jpo`, `id_utilisateur`) VALUES
+(1, '2025-06-11', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -101,12 +108,16 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `prenom` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
-  `adresse` text,
-  `id_role` int DEFAULT NULL,
-  PRIMARY KEY (`id_utilisateur`),
-  UNIQUE KEY `email` (`email`),
-  KEY `id_role` (`id_role`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `adresse` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_utilisateur`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `email`, `mot_de_passe`, `adresse`) VALUES
+(1, 'Sorrentino', 'Axel', 'gianni.sorrentino@laplateforme.io', '$2y$10$1TJNacNA.YXbtFUKKykTjed/oOR28xgZsywWfbGiocFJ4WxA.qn8u', 'Laxou');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
