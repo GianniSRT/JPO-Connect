@@ -4,6 +4,7 @@ import CityCard from './components/CityCard'
 import SignupForm from './components/SignupForm'
 import LoginForm from './components/LoginForm'
 import './App.css'
+import Footer from './components/footer'
 
 function App() {
   const [showSignup, setShowSignup] = useState(false)
@@ -65,9 +66,7 @@ function App() {
         </section>
       </main>
       {showSignup && <SignupForm onClose={() => setShowSignup(false)} />}
-      {showLogin && (
-        <LoginForm onClose={() => setShowLogin(false)} onLogin={setUser} />
-      )}
+      {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
     </>
   )
 }

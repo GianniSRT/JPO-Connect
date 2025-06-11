@@ -1,0 +1,82 @@
+.lp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0052cc 0%, #ffffff 100%);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.lp-footer .lp-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0052cc;
+  background: #fff;
+  padding: 0.3em 0.8em;
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+.lp-footer nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-footer nav ul li {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.lp-footer nav ul li:hover {
+  color: #0052cc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.2em 0.6em;
+}
+ 
+
+.lp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0052cc 0%, #ffffff 100%);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.lp-footer .lp-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0052cc;
+  background: #fff;
+  padding: 0.3em 0.8em;
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+.lp-footer nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-footer nav ul li {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.lp-footer nav ul li:hover {
+  color: #0052cc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.2em 0.6em;
+}
