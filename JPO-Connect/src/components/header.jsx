@@ -1,6 +1,6 @@
 import './Header.css'
 
-function Header({ onSignupClick }) {
+function Header({ onSignupClick, onLoginClick }) {
   return (
     <header className="lp-header">
       <div className="lp-logo">La Plateforme_</div>
@@ -12,7 +12,10 @@ function Header({ onSignupClick }) {
           <li>Marseille</li>
         </ul>
       </nav>
-      <button className="signup-btn" onClick={onSignupClick}>Inscription</button>
+      <div>
+        <button className="login-btn" onClick={onLoginClick}>Se connecter</button>
+        <button className="signup-btn" onClick={onSignupClick}>Inscription</button>
+      </div>
     </header>
   )
 }

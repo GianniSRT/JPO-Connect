@@ -2,10 +2,12 @@ import { useState } from 'react'
 import Header from './components/Header'
 import CityCard from './components/CityCard'
 import SignupForm from './components/SignupForm'
+import LoginForm from './components/LoginForm'
 import './App.css'
 
 function App() {
   const [showSignup, setShowSignup] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
 
   const cities = [
     {
@@ -36,7 +38,10 @@ function App() {
 
   return (
     <>
-      <Header onSignupClick={() => setShowSignup(true)} />
+      <Header
+        onSignupClick={() => setShowSignup(true)}
+        onLoginClick={() => setShowLogin(true)}
+      />
       <main className="lp-main">
         <h1>Bienvenue sur la plateforme JPO</h1>
         <p>
@@ -58,6 +63,7 @@ function App() {
         </section>
       </main>
       {showSignup && <SignupForm onClose={() => setShowSignup(false)} />}
+      {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
     </>
   )
 }
