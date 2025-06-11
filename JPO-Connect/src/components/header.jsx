@@ -1,6 +1,6 @@
 import './Header.css'
 
-function Header() {
+function Header({ onSignupClick }) {
   return (
     <header className="lp-header">
       <div className="lp-logo">La Plateforme_</div>
@@ -12,6 +12,7 @@ function Header() {
           <li>Marseille</li>
         </ul>
       </nav>
+      <button className="signup-btn" onClick={onSignupClick}>Inscription</button>
     </header>
   )
 }

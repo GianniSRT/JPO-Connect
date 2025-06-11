@@ -38,3 +38,19 @@
   border-radius: 4px;
   padding: 0.2em 0.6em;
 }
+
+.signup-btn {
+  background: #0052cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 2rem;
+  transition: background 0.2s;
+}
+
+.signup-btn:hover {
+  background: #003d99;
+}
