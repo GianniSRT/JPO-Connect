@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,24 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.lp-main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #f6faff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 82, 204, 0.07);
+  text-align: center;
+}
+
+.lp-main h1 {
+  color: #0052cc;
+  margin-bottom: 1rem;
+}
+
+.lp-main p {
+  color: #222;
+  font-size: 1.2rem;
 }
