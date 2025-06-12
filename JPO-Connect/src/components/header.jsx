@@ -1,9 +1,12 @@
 import './Header.css'
+import logoPlateforme from '../assets/logos-laplateforme/logo-sans-baseline/Logo_Plateforme_bleu.svg'
 
 function Header({ onSignupClick, onLoginClick, user }) {
   return (
     <header className="lp-header">
-      <div className="lp-logo">La Plateforme_</div>
+      <div className="lp-logo">
+        <img src={logoPlateforme} alt="Logo de la Plateforme" />
+      </div>
       <nav>
         <ul>
           <li>Accueil</li>

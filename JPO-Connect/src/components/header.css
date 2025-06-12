@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #0052cc 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #0052cc 100%);
   padding: 1rem 2rem;
   color: #fff;
 }
@@ -11,10 +11,15 @@
   font-size: 2rem;
   font-weight: bold;
   color: #0052cc;
-  background: #fff;
+  background: none !important;
   padding: 0.3em 0.8em;
   border-radius: 8px;
   letter-spacing: 2px;
+}
+
+.lp-logo img {
+  width: 150px; /* ajustez cette valeur selon vos besoins */
+  height: auto;
 }
 
 .lp-header nav ul {
