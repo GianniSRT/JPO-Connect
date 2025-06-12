@@ -5,6 +5,12 @@
   background: linear-gradient(90deg, #ffffff 0%, #0052cc 100%);
   padding: 1rem 2rem;
   color: #fff;
+  width: 100vw;           /* Ajouté */
+  max-width: 99vw;       /* Ajouté */
+  box-sizing: border-box; /* Ajouté */
+  left: 0;                /* Ajouté pour s'assurer qu'il commence à gauche */
+  position: relative;     /* Ajouté pour le positionnement */
+  overflow-x: hidden;     /* Ajouté pour éviter tout débordement */
 }
 
 .lp-logo {

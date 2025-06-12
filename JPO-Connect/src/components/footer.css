@@ -5,6 +5,12 @@
   background: linear-gradient(90deg, #ffffff 0%, #0052cc 100%);
   padding: 1rem 2rem;
   color: #fff;
+  width: 99vw;           /* Ajouté pour élargir sur toute la page */
+  box-sizing: border-box;/* Ajouté pour inclure le padding dans la largeur */
+  margin-left: 0;        /* Ajouté pour coller à gauche */
+  left: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .lp-footer .lp-logo {
