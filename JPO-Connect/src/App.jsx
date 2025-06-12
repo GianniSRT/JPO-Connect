@@ -66,7 +66,12 @@ function App() {
         </section>
       </main>
       {showSignup && <SignupForm onClose={() => setShowSignup(false)} />}
-      {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
+      {showLogin && (
+        <LoginForm
+          onClose={() => setShowLogin(false)}
+          onLogin={setUser} // <-- AJOUTE ou VÉRIFIE cette ligne !
+        />
+      )}
       <Footer />
     </>
   )

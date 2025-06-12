@@ -22,7 +22,13 @@ function LoginForm({ onClose, onLogin }) {
       })
       const data = await res.json()
       if (data.success) {
-        onLogin({ email: form.email, nom: data.nom, id: data.id_utilisateur })
+        if (onLogin) {
+          onLogin({
+            email: data.email,
+            nom: data.nom,
+            id: data.id_utilisateur
+          })
+        }
         onClose()
       } else {
         setError('Email ou mot de passe incorrect.')
