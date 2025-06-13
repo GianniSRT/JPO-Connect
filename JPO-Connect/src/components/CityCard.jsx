@@ -1,6 +1,7 @@
 import './CityCard.css'
 
 function CityCard({ name, image, date, address, description, link, onInscription }) {
+function CityCard({ name, image, date, address, description, link, onInscription }) {
   return (
     <div className="city-card">
       <img src={image} alt={name} className="city-card-img" />

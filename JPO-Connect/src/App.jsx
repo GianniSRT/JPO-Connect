@@ -42,32 +42,6 @@ function App() {
     }
   ];
 
-  // Fonction d'inscription à la JPO
-  const inscrireAJPO = async (id_jpo) => {
-    if (!user) {
-      alert("Veuillez vous connecter pour vous inscrire à une JPO.");
-      return;
-    }
-    try {
-      const res = await fetch('http://localhost/JPO-Connect/JPO-Connect/backend/api/inscription.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id_jpo,
-          id_utilisateur: user.id
-        })
-      });
-      const data = await res.json();
-      if (data.success) {
-        alert("Inscription réussie !");
-      } else {
-        alert("Erreur lors de l'inscription.");
-      }
-    } catch {
-      alert("Erreur réseau.");
-    }
-  };
-
   return (
     <>
       <Header
@@ -109,7 +83,6 @@ function App() {
               address={city.address}
               description={city.description}
               link={city.link}
-              onInscription={() => inscrireAJPO(city.id_jpo)} // <-- Ajoute cette ligne
             />
           ))}
         </section>
