@@ -13,6 +13,7 @@ function App() {
 
   const cities = [
     {
+      id_jpo: 1,
       name: "Martigues",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
       date: "Samedi 15 juin 2025",
@@ -21,6 +22,7 @@ function App() {
       link: "#martigues"
     },
     {
+      id_jpo: 2,
       name: "Cannes",
       image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
       date: "Samedi 22 juin 2025",
@@ -29,6 +31,7 @@ function App() {
       link: "#cannes"
     },
     {
+      id_jpo: 3,
       name: "Marseille",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
       date: "Samedi 29 juin 2025",
@@ -37,6 +40,31 @@ function App() {
       link: "#marseille"
     }
   ];
+
+  const inscrireAJPO = async (id_jpo) => {
+    if (!user) {
+      alert("Veuillez vous connecter pour vous inscrire à une JPO.");
+      return;
+    }
+    try {
+      const res = await fetch('http://localhost/JPO-Connect/JPO-Connect/backend/api/inscription.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id_jpo,
+          id_utilisateur: user.id
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert("Inscription réussie !");
+      } else {
+        alert("Erreur lors de l'inscription.");
+      }
+    } catch {
+      alert("Erreur réseau.");
+    }
+  };
 
   return (
     <>
@@ -61,6 +89,7 @@ function App() {
               address={city.address}
               description={city.description}
               link={city.link}
+              onInscription={() => inscrireAJPO(city.id_jpo)} // AJOUTE CETTE LIGNE
             />
           ))}
         </section>
