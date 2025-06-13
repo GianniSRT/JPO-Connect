@@ -1,6 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0;
+  max-width: 1650px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -44,12 +44,12 @@
 }
 
 .lp-main {
-  max-width: 700px;
-  margin: 3rem auto;
+  max-width: 1500px;
+  margin: 3rem;
   padding: 2rem;
   background: #f6faff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 82, 204, 0.07);
+  box-shadow: 5px 2px 12px rgba(0, 82, 204, 0.07);
   text-align: center;
 }
 
@@ -61,4 +61,143 @@
 .lp-main p {
   color: #222;
   font-size: 1.2rem;
+}
+
+.lp-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #111;
+  color: #fff;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 0 0px 0px;
+  position: relative;
+}
+
+.lp-banner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.lp-banner-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.lp-banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.lp-banner-info {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.lp-banner-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.lp-banner-btn-red {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.lp-banner-btn-white {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.lp-banner-img {
+  width: 300px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Bitmap_Arrow.svg') no-repeat center/contain;
+  /* Remplace par ton image ou illustration */
+  margin-left: 2rem;
+}
+
+.city-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.city-card {
+  background: #d3d3d3;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,82,204,0.07);
+  overflow: hidden;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+}
+
+.city-card-body h2 {
+  color: #111;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.city-card-date {
+  font-weight: bold;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.city-card-btn {
+  margin-top: 1rem;
+  background: #296cff;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.city-card-btn:hover {
+  background: #003d99;
+}
+
+.city-card-inscrire-btn {
+  margin-top: 2rem;
+  background: #111;
+  color: #fff;
+  padding: 0.7em 0;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  align-self: center;
+  transition: background 0.2s;
+}
+
+.city-card-inscrire-btn:hover {
+  background: #0052cc;
 }
