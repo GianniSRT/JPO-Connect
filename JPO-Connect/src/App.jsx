@@ -3,6 +3,7 @@ import Header from './components/Header'
 import CityCard from './components/CityCard'
 import SignupForm from './components/SignupForm'
 import LoginForm from './components/LoginForm'
+import Inscriptionvalide from './components/Inscriptionvalide'
 import './App.css'
 import Footer from './components/footer'
 
@@ -10,6 +11,8 @@ function App() {
   const [showSignup, setShowSignup] = useState(false)
   const [showLogin, setShowLogin] = useState(false)
   const [user, setUser] = useState(null)
+  const [inscriptionValide, setInscriptionValide] = useState(false)
+  const [campusInscrit, setCampusInscrit] = useState(null)
 
   // Ajoute un id_jpo à chaque ville pour l'inscription
   const cities = [
@@ -59,7 +62,10 @@ function App() {
       });
       const data = await res.json();
       if (data.success) {
-        alert("Inscription réussie !");
+        // Trouve le campus correspondant
+        const campus = cities.find(c => c.id_jpo === id_jpo);
+        setCampusInscrit(campus);
+        setInscriptionValide(true);
       } else {
         alert("Erreur lors de l'inscription.");
       }
@@ -67,6 +73,12 @@ function App() {
       alert("Erreur réseau.");
     }
   };
+
+  if (inscriptionValide && campusInscrit) {
+    return (
+      <Inscriptionvalide campus={campusInscrit} onClose={() => setInscriptionValide(false)} />
+    );
+  }
 
   return (
     <>

@@ -1,5 +1,5 @@
 import './Header.css'
-import logoPlateforme from '../assets/logos-laplateforme/logo-sans-baseline/Logo_Plateforme_bleu.svg'
+import logoPlateforme from '../assets/logos-laplateforme/logo-sans-baseline/Logo_Plateforme_Blc.svg'
 
 function Header({ onSignupClick, onLoginClick, user }) {
   return (

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #ffffff 0%, #0052cc 100%);
+  background: linear-gradient(90deg, #062871 0%, #0052cc 100%);
   padding: 1rem 2rem;
   color: #fff;
   width: 100vw;           /* Ajouté */
@@ -14,17 +14,17 @@
 }
 
 .lp-logo {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #0052cc;
   background: none !important;
-  padding: 0.3em 0.8em;
+  padding: 0.3em 1.5em;
   border-radius: 8px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
 .lp-logo img {
-  width: 150px; /* ajustez cette valeur selon vos besoins */
+  width: 200px; /* ajustez cette valeur selon vos besoins */
   height: auto;
 }
 
