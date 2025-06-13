@@ -87,7 +87,6 @@ function App() {
             La Plateforme_ Marseille, Samedi 14 juin 2025 de 14h à 17h
           </div>
           <div className="lp-banner-btns">
-            <button className="lp-banner-btn-red">S'inscrire à la JPO</button>
             <button className="lp-banner-btn-white">Une simple question ?</button>
           </div>
         </div>

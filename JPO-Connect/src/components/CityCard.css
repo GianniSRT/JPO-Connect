@@ -43,18 +43,77 @@
   color: #555;
 }
 
+.city-card-button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espace entre les boutons */
+  margin-top: 1rem; /* facultatif : pour ajouter un peu d'espace en haut */
+}
+
 .city-card-btn {
-  margin-top: 1rem;
-  background: #0052cc;
+  background-color: #0052cc;
   color: #fff;
-  padding: 0.5em 1.2em;
-  border-radius: 6px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: bold;
-  align-self: flex-start;
-  transition: background 0.2s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .city-card-btn:hover {
-  background: #003d99;
+  background-color: #003d99;
+}
+
+.city-card-inscrire-btn {
+  background-color: #00a15d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.city-card-inscrire-btn:hover {
+  background-color: #008645;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-date,
+.modal-address,
+.modal-description {
+  margin: 1rem 0;
 }
