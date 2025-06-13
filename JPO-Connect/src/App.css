@@ -44,9 +44,9 @@
 }
 
 .lp-main {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
+  max-width: 100%;
+  margin: 2rem;
+  padding: 1rem;
   background: #f6faff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 82, 204, 0.07);
@@ -55,7 +55,7 @@
 
 .lp-main h1 {
   color: #0052cc;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .lp-main p {
